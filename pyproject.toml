@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "apis-acdhch-django-auditlog"
-version = "0.1.0"
+version = "0.2.0"
 description = "Django auditlog integration for ACDHCH APIS instances"
 authors = ["Birger Schacht <birger.schacht@oeaw.ac.at>"]
 license = "MIT"
