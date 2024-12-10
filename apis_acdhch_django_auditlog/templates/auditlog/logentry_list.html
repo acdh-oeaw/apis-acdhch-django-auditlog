@@ -3,21 +3,31 @@
 {% block content %}
 <div class="container">
 {% if object_list %}
+{% regroup object_list by timestamp|date as object_by_date %}
+{% for logentry_date in object_by_date %}
+<h1 class="text-center logentry-date">{{ logentry_date.grouper }}</h1>
 <ul>
-  {% for object in object_list %}
-    <li>{{ object.timestamp }} <a href={% url "apis_core:generic:detail" object.content_type object.object_id %}>{{ object }}</a>
-    {% if object.action != 2 %}:
-      {% for change, values in object.changes_dict.items %}<b>{{ change }}</b>
+  {% for object in logentry_date.list %}
+  <li>
+    {{ object.timestamp|time }} <a href={% url "apis_core:generic:detail" object.content_type object.object_id %}>{{ object }}</a> by {{ object.actor }}
+    {% if object.action != 2 %}
+    <details>
+    <ul>
+      {% for change, values in object.changes_dict.items %}<li>{{ change }}:
         {% if values.operation and values.objects %}
           {{ values.operation }} {{ values.objects|join:", " }}
         {% else %}
-          "{{ values.0|truncatechars:32 }}" -> "{{ values.1|truncatechars:32 }}"
+          "{{ values.0|truncatechars:100 }}" -> "{{ values.1|truncatechars:100 }}"
         {% endif %}
+      </li>
       {% endfor %}
+    </ul>
+    </details>
     {% endif %}
     </li>
     {% endfor %}
 </ul>
+{% endfor %}
 <div class="pagination justify-content-center">
     <span class="step-links">
         {% if page_obj.has_previous %}
