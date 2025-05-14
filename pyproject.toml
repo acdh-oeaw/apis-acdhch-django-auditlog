@@ -1,6 +1,6 @@
 [project]
 name = "apis-acdhch-django-auditlog"
-version = "0.2.0"
+version = "0.2.1"
 description = "Django auditlog integration for ACDHCH APIS instances"
 readme = "README.md"
 requires-python = ">=3.11"

@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/acdh-oeaw/apis-acdhch-django-auditlog/compare/v0.2.0...v0.2.1) (2025-05-14)
+
+
+### Bug Fixes
+
+* **templates:** don't use entity references in templates ([15f479f](https://github.com/acdh-oeaw/apis-acdhch-django-auditlog/commit/15f479fb3493a4b1aa19c5bacfdf950459394c74))
+
 ## [0.2.0](https://github.com/acdh-oeaw/apis-acdhch-django-auditlog/compare/v0.1.0...v0.2.0) (2024-12-10)
 
 
