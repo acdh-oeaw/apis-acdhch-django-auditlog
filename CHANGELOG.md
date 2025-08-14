@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0](https://github.com/acdh-oeaw/apis-acdhch-django-auditlog/compare/v0.2.1...v0.3.0) (2025-08-14)
+
+
+### Features
+
+* **templates:** add base template extension ([426acd5](https://github.com/acdh-oeaw/apis-acdhch-django-auditlog/commit/426acd57126178810b44cf15ce14fdb7f0a2584e))
+* **urls:** add app_name and add names to individual paths ([729cbc9](https://github.com/acdh-oeaw/apis-acdhch-django-auditlog/commit/729cbc95a9bca729e2f53ee35463f26bf1f3b8ff))
+
 ## [0.2.1](https://github.com/acdh-oeaw/apis-acdhch-django-auditlog/compare/v0.2.0...v0.2.1) (2025-05-14)
 
 
